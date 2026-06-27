@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 👋 Hi, I'm Lethien.dev (Thien Le)
 
-## Getting Started
+### 🎮 Full-Stack Developer | Building Products with Purpose
 
-First, run the development server:
+I'm a passionate Full-Stack Developer based in Ho Chi Minh City, Vietnam, focused on building modern, scalable, and user-centered web applications. I love translating complex business requirements into intuitive user experiences and robust technical implementations.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ⚔️ Character Profile (RPG Stats)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Stat | Value | Description |
+| :--- | :--- | :--- |
+| **Level** | Lv.15 | Full-Stack Developer |
+| **Experience** | 1+ Years | Working on production projects |
+| **HP (Health)** | 100/100 | High energy & dedication to clean code |
+| **MP (Mana)** | 100/100 | Passionate about learning new technologies |
+| **Location** | Vietnam | Ho Chi Minh City |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 💼 Core Business Domains
 
-To learn more about Next.js, take a look at the following resources:
+I have hands-on experience designing, developing, and deploying software solutions across various industries:
+- 🩺 **Healthcare & Clinical Systems**
+- 🚗 **Automotive & Garage Management**
+- 📦 **Inventory & Retail Systems**
+- 🚚 **Transportation & Logistics**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ✨ Tech Stack & Spells
 
-## Deploy on Vercel
+### 🔮 Frontend Spells
+- **React.js & Next.js** (App Router, Turbopack)
+- **TypeScript & JavaScript**
+- **Tailwind CSS & CSS-first layout systems**
+- **Framer Motion** (for interactive animations)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 🧪 Backend & Databases
+- **Node.js & Express.js**
+- **Strapi CMS** (Content Management Systems)
+- **PostgreSQL, MySQL, MongoDB**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### ⚙️ DevOps & Tools
+- **Docker**
+- **Git & GitHub**
+- **Vercel**
+
+---
+
+## 📁 Featured Quests (Projects)
+
+Here are the key projects I've built:
+
+### 🥦 FreshFoodStore (E-commerce Web App)
+- **Description**: A modern, high-performance grocery and fresh food e-commerce platform.
+- **Tech Stack**: Next.js, React, TypeScript, Tailwind CSS.
+- **Live Demo**: [FreshFoodStore](https://e-com-freshfoodstore.vercel.app/)
+
+### 🩺 MediClinic (Healthcare Clinical Web App)
+- **Description**: An intuitive clinical management and skin clinic presentation system.
+- **Tech Stack**: Next.js, React, Strapi CMS, Tailwind CSS.
+- **Live Demo**: [MediClinic](https://wedoskinclinic.com/)
+
+### 🚗 Garage Manager (Automotive Operations Web App)
+- **Description**: Operations and schedule management web app for automotive centers.
+- **Tech Stack**: Next.js, React, Tailwind CSS.
+- **Live Demo**: [Garage Manager](https://garage-manager-demo.vercel.app)
+
+---
+
+## 📬 Contact Me & Accept Quest
+
+Feel free to reach out if you'd like to discuss project opportunities, collaboration, or just talk shop!
+
+- ✉️ **Email**: [lethienacqt@gmail.com](mailto:lethienacqt@gmail.com)
+- 💼 **LinkedIn**: [@thienle-dev](https://www.linkedin.com/in/thienle-dev/)
+- 🐙 **GitHub**: [@HoverJs](https://github.com/HoverJs)
+- 👥 **Facebook**: [@lethienacqt](https://www.facebook.com/lethienacqt)
