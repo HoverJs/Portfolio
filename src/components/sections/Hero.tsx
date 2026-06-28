@@ -192,7 +192,7 @@ export const Hero: React.FC = () => {
               {/* Garage (Right behind) */}
               <div 
                 className="absolute right-0 top-10 w-[240px] h-[160px] border-2 border-slate-700 bg-slate-900 rounded p-1 shadow-lg rotate-6 hover:z-30 hover:-translate-y-2 hover:rotate-0 hover:border-[#A855F7] transition-all duration-300 cursor-pointer"
-                onClick={() => window.open('https://garage-manager-demo.vercel.app', '_blank', 'noopener,noreferrer')}
+                onClick={() => window.open('https://web-app-erp-garage-auto.vercel.app/', '_blank', 'noopener,noreferrer')}
               >
                 <div className="flex justify-between items-center bg-[#0c0c20] p-1 border-b border-slate-700 rounded-t text-[8px] font-press-start mb-1 text-slate-400">
                   <span className="truncate">Garage</span>

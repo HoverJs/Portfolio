@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, Heart, Award } from 'lucide-react';
 import { Github } from '../ui/BrandIcons';
@@ -10,6 +11,7 @@ import { PixelSlime, PixelRock, GrassBorder } from '../ui/PixelAssets';
 
 const CATEGORIES = ['All', 'Web App', 'Ecommerce', 'CMS', 'Tools'] as const;
 type CategoryType = typeof CATEGORIES[number];
+const PROJECT_FALLBACK_URL = '/404';
 
 // Tag mapping for each project, matching the screenshot
 const PROJECT_TAGS: Record<string, { label: string; style: string; titleColor: string }> = {
@@ -260,6 +262,19 @@ export const Projects: React.FC = () => {
     return proj.category === activeCategory;
   });
 
+  const getProjectDestination = (liveUrl?: string) => liveUrl || PROJECT_FALLBACK_URL;
+
+  const openProject = (liveUrl?: string) => {
+    const destination = getProjectDestination(liveUrl);
+
+    if (liveUrl) {
+      window.open(destination, '_blank', 'noopener,noreferrer');
+      return;
+    }
+
+    window.location.href = destination;
+  };
+
   return (
     <section id="projects" className="py-12 px-4 sm:px-6 lg:px-8 bg-[#050510] relative overflow-hidden">
       <div className="w-full">
@@ -367,11 +382,7 @@ export const Projects: React.FC = () => {
                   <PixelCard 
                     glowColor="dark"
                     className="flex flex-col justify-between h-full hover:shadow-[0_0_15px_rgba(139,92,246,0.15)] transition-all duration-300 p-6 cursor-pointer"
-                    onClick={() => {
-                      if (proj.liveUrl) {
-                        window.open(proj.liveUrl, '_blank', 'noopener,noreferrer');
-                      }
-                    }}
+                    onClick={() => openProject(proj.liveUrl)}
                   >
                     <div>
                       {/* Top Item Badge & Action Icons */}
@@ -381,26 +392,26 @@ export const Projects: React.FC = () => {
                         </span>
                         
                         <div className="flex items-center gap-2.5">
-                          <a 
-                            href={proj.githubUrl} 
-                            target="_blank" 
-                            rel="noopener noreferrer" 
+                          <a
+                            href={proj.githubUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="text-slate-500 hover:text-white transition-colors"
                             title="GitHub Repository"
                             onClick={(e) => e.stopPropagation()}
                           >
                             <Github className="w-4.5 h-4.5 fill-current" />
                           </a>
-                          <a 
-                            href={proj.liveUrl} 
-                            target="_blank" 
-                            rel="noopener noreferrer" 
+                          <Link
+                            href={getProjectDestination(proj.liveUrl)}
+                            target={proj.liveUrl ? '_blank' : undefined}
+                            rel={proj.liveUrl ? 'noopener noreferrer' : undefined}
                             className="text-slate-500 hover:text-white transition-colors"
-                            title="Live Demo"
+                            title={proj.liveUrl ? 'Live Demo' : 'Demo Coming Soon'}
                             onClick={(e) => e.stopPropagation()}
                           >
                             <ExternalLink className="w-4.5 h-4.5" />
-                          </a>
+                          </Link>
                         </div>
                       </div>
 

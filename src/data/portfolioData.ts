@@ -128,7 +128,7 @@ export const PROJECTS: Project[] = [
     category: "Web App",
     technologies: ["React", "TypeScript", "Node.js", "MongoDB"],
     githubUrl: "https://github.com/HoverJs/garage-management",
-    liveUrl: "https://garage-manager-demo.vercel.app"
+    liveUrl: "https://web-app-erp-garage-auto.vercel.app/"
   },
   {
     id: "mediclinic",
@@ -145,8 +145,7 @@ export const PROJECTS: Project[] = [
     description: "My previous 3D portfolio showcasing interactive experiments and shader designs.",
     category: "Web App",
     technologies: ["Next.js", "TypeScript", "Framer Motion"],
-    githubUrl: "https://github.com/HoverJs/portfolio-v2",
-    liveUrl: "https://lethien-v2.vercel.app"
+    githubUrl: "https://github.com/HoverJs/portfolio-v2"
   },
   {
     id: "blog-cms",
@@ -154,8 +153,7 @@ export const PROJECTS: Project[] = [
     description: "A headless CMS blog using Strapi with multi-language translation and static site generation.",
     category: "CMS",
     technologies: ["Strapi", "MySQL", "Tailwind", "Docker"],
-    githubUrl: "https://github.com/HoverJs/blog-cms",
-    liveUrl: "https://blog-cms-demo.vercel.app"
+    githubUrl: "https://github.com/HoverJs/blog-cms"
   },
   {
     id: "json-formatter",
@@ -163,8 +161,7 @@ export const PROJECTS: Project[] = [
     description: "Developer utility to format, parse, validate, and compare JSON data locally in the browser.",
     category: "Tools",
     technologies: ["React", "TypeScript", "CodeMirror"],
-    githubUrl: "https://github.com/HoverJs/json-formatter",
-    liveUrl: "https://json-formatter-pro.vercel.app"
+    githubUrl: "https://github.com/HoverJs/json-formatter"
   }
 ];
 

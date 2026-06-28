@@ -65,7 +65,7 @@ Here are the key projects I've built:
 ### 🚗 Garage Manager (Automotive Operations Web App)
 - **Description**: Operations and schedule management web app for automotive centers.
 - **Tech Stack**: Next.js, React, Tailwind CSS.
-- **Live Demo**: [Garage Manager](https://garage-manager-demo.vercel.app)
+- **Live Demo**: [Garage Manager](https://web-app-erp-garage-auto.vercel.app/)
 
 ---
 
