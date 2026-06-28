@@ -226,7 +226,12 @@ export const TECH_STACK: TechCategory[] = [
       { name: "Figma" },
       { name: "ESLint" },
       { name: "Prettier" },
-      { name: "Vercel" }
+      { name: "Vercel" },
+      { name: "Claude" },
+      { name: "ChatGPT" },
+      { name: "Gemini" },
+      { name: "GitHub Copilot" },
+      { name: "Weavy" }
     ]
   }
 ];

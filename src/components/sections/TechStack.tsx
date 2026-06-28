@@ -171,6 +171,49 @@ const TECH_LOGOS: Record<string, React.ReactNode> = {
       <path d="M24 22.5L12 1.5 0 22.5z" />
     </svg>
   ),
+  Claude: (
+    <svg viewBox="0 0 24 24" className="w-8 h-8 shrink-0">
+      <rect width="24" height="24" rx="6" fill="#d97706" />
+      <path d="M15.2 6.5c-2.7 0-4.8 2.4-4.8 5.5s2.1 5.5 4.8 5.5c1 0 1.9-.3 2.6-.8v-2.3c-.7.7-1.5 1-2.4 1-1.5 0-2.7-1.5-2.7-3.4s1.2-3.4 2.7-3.4c.9 0 1.7.3 2.4 1V7.3c-.8-.5-1.7-.8-2.6-.8z" fill="#111827" />
+      <path d="M8.7 8.4H7v7.2h1.7v-2.4h1.7c1.7 0 2.8-1 2.8-2.4s-1.1-2.4-2.8-2.4H8.7zM8.7 10h1.5c.7 0 1.2.4 1.2.8s-.5.8-1.2.8H8.7V10z" fill="#111827" />
+    </svg>
+  ),
+  ChatGPT: (
+    <svg viewBox="0 0 24 24" className="w-8 h-8 shrink-0">
+      <rect width="24" height="24" rx="6" fill="#10a37f" />
+      <path d="M12 5.4a3.1 3.1 0 012.7 1.5 3 3 0 013.9 3.8 3 3 0 011.6 2.7 3.1 3.1 0 01-3.1 3.1 3.1 3.1 0 01-5.8 1.2 3 3 0 01-3.8-3.9 3 3 0 01-1.6-2.7A3.1 3.1 0 019 8a3.1 3.1 0 013-2.6z" fill="none" stroke="#ffffff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M9.4 8.2l5.3 3.1M8.3 12h6.1M10 15.6l3.1-5.3M13.9 16.1l-3.1-5.4M15.8 8.8l-6.1 3.5" fill="none" stroke="#ffffff" strokeWidth="1.2" strokeLinecap="round" />
+    </svg>
+  ),
+  Gemini: (
+    <svg viewBox="0 0 24 24" className="w-8 h-8 shrink-0">
+      <defs>
+        <linearGradient id="gemini-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#60a5fa" />
+          <stop offset="50%" stopColor="#a78bfa" />
+          <stop offset="100%" stopColor="#f472b6" />
+        </linearGradient>
+      </defs>
+      <path d="M12 2l2.2 5.8L20 10l-5.8 2.2L12 18l-2.2-5.8L4 10l5.8-2.2L12 2z" fill="url(#gemini-gradient)" />
+      <circle cx="12" cy="10" r="1.6" fill="#ffffff" />
+    </svg>
+  ),
+  'GitHub Copilot': (
+    <svg viewBox="0 0 24 24" className="w-8 h-8 shrink-0">
+      <rect width="24" height="24" rx="6" fill="#0f172a" />
+      <path d="M8 9.2A2.2 2.2 0 0110.2 7h3.6A2.2 2.2 0 0116 9.2v5.6A2.2 2.2 0 0113.8 17h-3.6A2.2 2.2 0 018 14.8V9.2z" fill="#7c3aed" />
+      <circle cx="10.8" cy="11.3" r="1.1" fill="#ffffff" />
+      <circle cx="13.2" cy="11.3" r="1.1" fill="#ffffff" />
+      <path d="M9.8 14.2c.6.5 1.3.8 2.2.8s1.6-.3 2.2-.8" fill="none" stroke="#ffffff" strokeWidth="1.1" strokeLinecap="round" />
+      <path d="M9 7.8L7.4 6.5M15 7.8l1.6-1.3" fill="none" stroke="#22d3ee" strokeWidth="1.2" strokeLinecap="round" />
+    </svg>
+  ),
+  Weavy: (
+    <svg viewBox="0 0 24 24" className="w-8 h-8 shrink-0">
+      <rect width="24" height="24" rx="6" fill="#2563eb" />
+      <path d="M5.5 7l2 10h1.8l1.7-6 1.7 6h1.8l2-10h-1.9l-1.1 6-1.7-6H10l-1.7 6-1.1-6H5.5z" fill="#ffffff" />
+    </svg>
+  ),
 };
 
 // Styling details for Category headers (icons, text color, and border shadows)
@@ -313,14 +356,14 @@ export const TechStack: React.FC = () => {
                   {/* Metric 1 */}
                   <div className="bg-[#050510] border border-slate-800/80 p-3 rounded-xl flex flex-col items-center justify-center text-center select-none min-h-[105px]">
                     <Code2 className="w-5.5 h-5.5 text-cyan-400 mb-1" />
-                    <span className="font-press-start text-sm sm:text-base text-white font-bold leading-none">20+</span>
+                    <span className="font-press-start text-sm sm:text-base text-white font-bold leading-none">30+</span>
                     <span className="font-share-tech text-xs text-slate-500 uppercase tracking-widest mt-1">Technologies</span>
                   </div>
 
                   {/* Metric 2 */}
                   <div className="bg-[#050510] border border-slate-800/80 p-3 rounded-xl flex flex-col items-center justify-center text-center select-none min-h-[105px]">
                     <Cpu className="w-5.5 h-5.5 text-green-400 mb-1" />
-                    <span className="font-press-start text-sm sm:text-base text-white font-bold leading-none">5+</span>
+                    <span className="font-press-start text-sm sm:text-base text-white font-bold leading-none">7</span>
                     <span className="font-share-tech text-xs text-slate-500 uppercase tracking-widest mt-1">Categories</span>
                   </div>
 
