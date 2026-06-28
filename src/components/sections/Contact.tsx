@@ -1,13 +1,14 @@
 'use client';
 
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Mail, MapPin, Briefcase, Clock, Send } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Mail, MapPin, Briefcase, Clock, Send, X } from 'lucide-react';
 import { Github, Linkedin, Facebook } from '../ui/BrandIcons';
 import { PERSONAL_INFO } from '@/data/portfolioData';
 import { PixelCard } from '../ui/PixelCard';
 import { PixelButton } from '../ui/PixelButton';
 import { PixelSlime } from '../ui/PixelAssets';
+import { PixelBadge } from '../ui/PixelBadge';
 
 export const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -18,6 +19,17 @@ export const Contact: React.FC = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  const [isHireModalOpen, setIsHireModalOpen] = useState(false);
+  const [hireMessage, setHireMessage] = useState('');
+
+  const handleLaunchMail = () => {
+    if (!hireMessage.trim()) return;
+    const mailtoUrl = `mailto:${PERSONAL_INFO.email}?subject=Hiring%20Lethien.dev&body=${encodeURIComponent(hireMessage)}`;
+    window.location.href = mailtoUrl;
+    setIsHireModalOpen(false);
+    setHireMessage('');
+  };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -174,13 +186,14 @@ export const Contact: React.FC = () => {
                       <span>{isSubmitting ? 'TRANSMITTING...' : 'SEND MESSAGE'}</span>
                     </PixelButton>
 
-                    <a
-                      href={`mailto:${PERSONAL_INFO.socials.email}?subject=Hiring%20Lethien.dev&body=Hi%20Lethien,%0A%0AWe%20would%20like%20to%20discuss%20a%20job%20opportunity%20with%20you.`}
+                    <button
+                      type="button"
+                      onClick={() => setIsHireModalOpen(true)}
                       className="w-full flex items-center justify-center gap-2.5 py-3.5 bg-[#8B5CF6] hover:bg-[#A855F7] border-2 border-white hover:border-[#22D3EE] text-white font-press-start text-[10px] sm:text-[11px] tracking-wider uppercase pixel-corners shadow-[0_0_10px_rgba(139,92,246,0.3)] hover:shadow-[0_0_15px_rgba(34,211,238,0.5)] hover:scale-[1.01] transition-all duration-200 select-none text-center cursor-pointer"
                     >
                       <Mail className="w-4 h-4" />
                       <span>HIRE ME</span>
-                    </a>
+                    </button>
                   </div>
                 </form>
 
@@ -236,8 +249,11 @@ export const Contact: React.FC = () => {
                       <Briefcase className="w-4 h-4" />
                     </div>
                     <div>
-                      <span className="text-slate-500 block uppercase text-xs tracking-wider">Quest Availability</span>
-                      <span className="text-white">{PERSONAL_INFO.availability}</span>
+                      <span className="text-slate-500 block uppercase text-xs tracking-wider">Quest Status</span>
+                      <div className="flex flex-wrap gap-2 mt-1.5">
+                        <PixelBadge variant="success">FREELANCE</PixelBadge>
+                        <PixelBadge variant="success">OPEN TO WORK</PixelBadge>
+                      </div>
                     </div>
                   </div>
 
@@ -292,12 +308,82 @@ export const Contact: React.FC = () => {
                   </a>
                 </div>
               </PixelCard>
+
+
             </motion.div>
           </div>
 
         </div>
 
       </div>
+
+      <AnimatePresence>
+        {isHireModalOpen && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.9, y: 20 }}
+              transition={{ duration: 0.2 }}
+              className="w-full max-w-lg"
+            >
+              <PixelCard glowColor="primary" className="p-6 relative border-2 border-[#8B5CF6]">
+                <button
+                  type="button"
+                  onClick={() => setIsHireModalOpen(false)}
+                  className="absolute top-4 right-4 text-slate-400 hover:text-white transition-colors cursor-pointer"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+                
+                <div className="flex justify-between items-center pb-3 border-b-2 border-slate-800 mb-5">
+                  <span className="font-press-start text-[10px] text-[#22D3EE] tracking-widest uppercase">
+                    HIRE PROMPT
+                  </span>
+                </div>
+
+                <div className="space-y-4">
+                  <p className="font-share-tech text-base text-slate-300">
+                    Write your message details / requirements below. A new email template will be generated for you.
+                  </p>
+
+                  <div>
+                    <label className="font-press-start text-[9px] tracking-wider text-slate-400 block mb-2.5 uppercase">
+                      [ ENTER YOUR MESSAGE ]
+                    </label>
+                    <textarea
+                      required
+                      rows={6}
+                      value={hireMessage}
+                      onChange={(e) => setHireMessage(e.target.value)}
+                      placeholder="Describe your job opportunity, project scope, or requirements here..."
+                      className="w-full bg-slate-950/80 border-2 border-slate-800 focus:border-[#8B5CF6] focus:shadow-[0_0_10px_rgba(139,92,246,0.3)] rounded-md px-3.5 py-3 font-share-tech text-base text-white placeholder-slate-600 outline-none pixel-corners-sm transition-all resize-none"
+                    />
+                  </div>
+
+                  <div className="flex gap-3 justify-end pt-2">
+                    <PixelButton
+                      variant="dark"
+                      onClick={() => setIsHireModalOpen(false)}
+                    >
+                      Cancel
+                    </PixelButton>
+                    <PixelButton
+                      variant="primary"
+                      disabled={!hireMessage.trim()}
+                      onClick={handleLaunchMail}
+                      className="flex items-center justify-center gap-2"
+                    >
+                      <Send className="w-3.5 h-3.5" />
+                      <span>LAUNCH MAIL</span>
+                    </PixelButton>
+                  </div>
+                </div>
+              </PixelCard>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
     </section>
   );
 };
