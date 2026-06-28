@@ -142,10 +142,11 @@ export const PROJECTS: Project[] = [
   {
     id: "portfolio-v2",
     title: "Portfolio V2",
-    description: "My previous 3D portfolio showcasing interactive experiments and shader designs.",
+    description: "A Different Approach to Portfolio Design — Blending Modern Development, Personal Branding, and User Experience into a Single Digital Presence.",
     category: "Web App",
     technologies: ["Next.js", "TypeScript", "Framer Motion"],
-    githubUrl: "https://github.com/HoverJs/portfolio-v2"
+    githubUrl: "https://github.com/HoverJs/Portfolio",
+    liveUrl: "https://portfolio-v2-swart-two.vercel.app/"
   },
   {
     id: "blog-cms",
